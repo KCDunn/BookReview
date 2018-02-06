@@ -27,7 +27,6 @@
             <p>Rating: {{review.rating}} out of 5</p>
             <p><a href="/user/{{review.user.id}}">{{review.user.first_name}} {{review.user.last_name}} </a>says: {{review.comment}}</p>
             <p>Posted on: {{review.created_at}}</p>
-            <p>review id# is: {{review.id}}</p>
             {% if review.user.id == user_id %}
                 <p><a href="/book/{{book.id}}/delete/{{ review.id }}">-delete this review-</a></p>
             {% endif %}
